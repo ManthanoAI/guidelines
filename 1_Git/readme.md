@@ -2,11 +2,12 @@
 
 To be aligned with all developers in one organization we should follow a unified git structure.
 
-<a href="##Repository">Repository</a>
-<a href="###Readme">Commits</a>
-<a href="##Gitignore">Commits</a>
-<a href="##Commits">Commits</a>
-<a href="##Authors">Commits</a>
+⋅⋅*
+- [Repository](#Repository)
+- [Readme](#Readme)
+- [Gitignore](#Gitignore)
+- [Commits](#Commits)
+- [Repository](#Authors).
 
 ## Repository
 
@@ -16,7 +17,7 @@ To create a repository (repo) please use following structure:
 - format: [client]-[projectName], e.g. manthano-mobile-app
 - permissions: default private
 
-### Readme:
+### Readme
 - name: readme.md
 - use: <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown syntax</a> 
 - language: english
