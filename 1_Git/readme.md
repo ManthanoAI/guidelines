@@ -2,12 +2,11 @@
 
 To be aligned with all developers in one organization we should follow a unified git structure.
 
-⋅⋅*
 - [Repository](#Repository)
 - [Readme](#Readme)
 - [Gitignore](#Gitignore)
 - [Commits](#Commits)
-- [Repository](#Authors).
+- [Repository](#Authors)
 
 ## Repository
 
@@ -41,12 +40,12 @@ To create a git commit please use the following structure:
 - Location (Noncompulsary): seperated by > => e.g. contact > form > parts >
 
 - MVP Emojis: <a href="https://gitmoji.dev/">https://gitmoji.dev/</a>
-- :art: Improve structure / format of the code
-- :fire: Remove code or files
-- :rocket: Deploy stuff
-- :construction: Work in progress
-- :sparkles: Introduce a new feature
-- :memo: Documentation updated
+:art: ":art:" Improve structure / format of the code  
+:fire: Remove code or files  
+:rocket: Deploy stuff  
+:construction: Work in progress  
+:sparkles: Introduce a new feature  
+:memo: Documentation updated  
 - Full examples: <p>
 :art: contact > form > parts > updated view component #420 <p>
 :memo: updated documentation <p>
