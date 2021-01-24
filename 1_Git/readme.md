@@ -11,9 +11,9 @@ To be aligned with all developers in one organization we should follow a unified
 ## Repository
 
 To create a repository (repo) please use following structure:
-- one repo per project (even if same client)
-- name: lowercase, seperate-words-with-dashes
-- format: [client]-[projectName], e.g. manthano-mobile-app
+- one repo per project (even if the same client)
+- name: choose wisely, lowercase, seperate-words-with-dashes
+- format: [client]-[projectName], `e.g. manthano-mobile-app`
 - permissions: default private
 
 ### Readme
@@ -39,17 +39,17 @@ To create a git commit please use the following structure:
 - Bug tracker: Bug tracking ID e.g. #420
 - Location (Noncompulsary): seperated by > => e.g. contact > form > parts >
 
-- MVP Emojis: <a href="https://gitmoji.dev/">https://gitmoji.dev/</a>
-  -:art: `:art:` Improve structure / format of the code   
-  -:fire: Remove code or files  
-  -:rocket: Deploy stuff  
-  -:construction: Work in progress  
-  -:sparkles: Introduce a new feature  
-  -:memo: Documentation updated  
-- Full examples:
-  -:art: contact > form > parts > updated view component #420 <p>
-  -:memo: updated documentation <p>
-  -:sparkles: backtesting > implemented LSTM #1312 <p>
+- MVP Emojis: <a href="https://gitmoji.dev/">https://gitmoji.dev/</a><p>
+  - :art: `:art:` Improve structure / format of the code   
+  - :fire: `:fire:` Remove code or files  
+  - :rocket: `:rocket:` Deploy stuff  
+  - :construction: `:construction:` Work in progress  
+  - :sparkles: `:sparkles:` Introduce a new feature  
+  - :memo: `:memo:` Documentation updated  
+- Full examples:<p>
+  - :art: contact > form > parts > updated view component #420 <p>
+  - :memo: updated documentation <p>
+  - :sparkles: backtesting > implemented LSTM #1312 <p>
 
 ### Authors
 
