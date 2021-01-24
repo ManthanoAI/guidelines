@@ -18,7 +18,7 @@ To create a repository (repo) please use following structure:
 
 ### Readme
 - name: readme.md
-- use: <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown syntax</a> 
+- use: [markdown syntax]("https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet")
 - language: english
 - content: instructions, set-up, access, urls
 - optional content: architecture, dependencies, access points (APIs), teams, resources
@@ -39,17 +39,17 @@ To create a git commit please use the following structure:
 - Bug tracker: Bug tracking ID e.g. #420
 - Location (Noncompulsary): seperated by > => e.g. contact > form > parts >
 
-- MVP Emojis: <a href="https://gitmoji.dev/">https://gitmoji.dev/</a><p>
-:art: Improve structure / format of the code  
-:fire: Remove code or files  
-:rocket: Deploy stuff  
-:construction: Work in progress  
-:sparkles: Introduce a new feature  
-:memo: Documentation updated  
-- Full examples: <p>
-:art: contact > form > parts > updated view component #420 <p>
-:memo: updated documentation <p>
-:sparkles: backtesting > implemented LSTM #1312 <p>
+- MVP Emojis: <a href="https://gitmoji.dev/">https://gitmoji.dev/</a>
+  -:art: `:art:` Improve structure / format of the code   
+  -:fire: Remove code or files  
+  -:rocket: Deploy stuff  
+  -:construction: Work in progress  
+  -:sparkles: Introduce a new feature  
+  -:memo: Documentation updated  
+- Full examples:
+  -:art: contact > form > parts > updated view component #420 <p>
+  -:memo: updated documentation <p>
+  -:sparkles: backtesting > implemented LSTM #1312 <p>
 
 ### Authors
 
