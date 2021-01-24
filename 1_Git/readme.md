@@ -45,9 +45,9 @@ To create a repository (repo) please use following structure:
   - :sparkles: `:sparkles:` Introduce a new feature  
   - :memo: `:memo:` Documentation updated  
 - Full examples:<p>
-  - :art: contact > form > parts > updated view component #420  
-  - :memo: updated documentation  
-  - :sparkles: backtesting > implemented LSTM #1312  
+  - :art: contact > form > parts > updated view component #420
+  - :memo: updated documentation
+  - :sparkles: backtesting > implemented LSTM #1312
 
 ### Authors
 
