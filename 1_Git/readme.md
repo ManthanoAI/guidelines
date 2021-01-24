@@ -26,8 +26,8 @@ To create a repository (repo) please use following structure:
 ### Gitignore
 - Add .gitignore with initial commit
 - Use <a href="https://gitignore.io" rel="nofollow">Gitignore.io</a> to generate gitignore files
-- Remove dependencies (e.g. node-modules)
-- Remove system files (e.g. .DS_Store)
+- Remove dependencies (e.g. `node-modules`)
+- Remove system files (e.g. `.DS_Store`)
 
 ### Commits
 - One feature per commit
