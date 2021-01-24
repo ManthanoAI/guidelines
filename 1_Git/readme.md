@@ -13,7 +13,7 @@ To be aligned with all developers in one organization we should follow a unified
 To create a repository (repo) please use following structure:
 - one repo per project (even if the same client)
 - name: choose wisely, lowercase, seperate-words-with-dashes
-- format: [client]-[projectName], `e.g. manthano-mobile-app`
+- format: [client]-[projectName], e.g. `manthano-mobile-app`
 - permissions: default private
 
 ### Readme
@@ -33,9 +33,9 @@ To create a repository (repo) please use following structure:
 - One feature per commit
 - Informative, clear, simple (not more than 50 characters)
 - Format: [emoji] [location] [message] [#bug tracker]
-- Message: Begin with a verb like: `add, update, remove, reformat, move, create, delete`
+- Message: Begin with a verb like: e.g. `add, update, remove, reformat, move, create, delete`
 - Bug tracker: Bug tracking ID e.g. `#420`
-- Location (Noncompulsary): seperated by > => `e.g. contact > form > parts >`
+- Location (Noncompulsary): seperated by > => e.g. `contact > form > parts >`
 
 - MVP Emojis: <a href="https://gitmoji.dev/">https://gitmoji.dev/</a><p>
   - :art: `:art:` Improve structure / format of the code  
