@@ -1,6 +1,6 @@
 # Manthano Guidelines
 
-- [Git](Man7hano/guidelines/1_Git)
+- [Git](/Man7hano/guidelines/1_Git)
 
 
 # ToDo
