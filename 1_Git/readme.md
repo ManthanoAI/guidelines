@@ -39,8 +39,8 @@ To create a git commit please use the following structure:
 - Bug tracker: Bug tracking ID e.g. #420
 - Location (Noncompulsary): seperated by > => e.g. contact > form > parts >
 
-- MVP Emojis: <a href="https://gitmoji.dev/">https://gitmoji.dev/</a>
-:art: ":art:" Improve structure / format of the code  
+- MVP Emojis: <a href="https://gitmoji.dev/">https://gitmoji.dev/</a><p>
+:art: Improve structure / format of the code  
 :fire: Remove code or files  
 :rocket: Deploy stuff  
 :construction: Work in progress  
