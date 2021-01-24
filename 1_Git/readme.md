@@ -1,4 +1,35 @@
-# guidelines
+# Git Guidelines
+
+To be aligned with all developers in one organization we should follow a unified git structure.
+
+<a href="##Repository">Repository</a>
+<a href="###Readme">Commits</a>
+<a href="##Gitignore">Commits</a>
+<a href="##Commits">Commits</a>
+<a href="##Authors">Commits</a>
+
+## Repository
+
+To create a repository (repo) please use following structure:
+- one repo per project (even if same client)
+- name: lowercase, seperate-words-with-dashes
+- format: [client]-[projectName], e.g. manthano-mobile-app
+- permissions: default private
+
+### Readme:
+- name: readme.md
+- use: <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown syntax</a> 
+- language: english
+- content: instructions, set-up, access, urls
+- optional content: architecture, dependencies, access points (APIs), teams, resources
+
+### Gitignore
+- Add .gitignore with initial commit
+- Use <a href="https://gitignore.io" rel="nofollow">Gitignore.io</a> to generate gitignore files
+- Remove dependencies (e.g. node-modules)
+- Remove system files (e.g. .DS_Store)
+
+### Commits
 
 To create a git commit please use the following structure:
 - One feature per commit
@@ -19,3 +50,7 @@ To create a git commit please use the following structure:
 :art: contact > form > parts > updated view component #420 <p>
 :memo: updated documentation <p>
 :sparkles: backtesting > implemented LSTM #1312 <p>
+
+### Authors
+
+<a href="https://github.com/Man7hano">Manthano</a>
