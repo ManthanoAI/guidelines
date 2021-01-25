@@ -1,6 +1,10 @@
 # Git Setup Syntax
 
-## Clone, Pull
+- [Clone or Pull](#Clone-or-Pull)
+- [Remote](#Remote)
+- [Access Token](#Access-Token)
+
+## Clone-or-Pull
 
 - Create a local copy  
 
@@ -34,7 +38,7 @@
 
    `git remote -v`
 
-## Access Token
+## Access-Token
 
 - Create an access token on platform (Github, GitLab, SourceForge)
   - GitHub: Your profile > Settings > Devloper setting > Personal access tokens
