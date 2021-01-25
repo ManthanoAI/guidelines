@@ -1,4 +1,4 @@
-# Git Setup syntax
+# Git Setup Syntax
 
 ## Clone, Pull
 
