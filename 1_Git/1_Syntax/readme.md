@@ -3,24 +3,24 @@
 ## Clone, Pull
 
 - Create a local copy
-`git clone`
+  `git clone`
 
 - Update the local copy
-`git pull` or
-`git fetch + git merge`
+  `git pull` or
+  `git fetch + git merge`
 
 ## Remote
 
 - Add a remote URL
-`got remote add origin https://github.com/USERNAME/REPOSITORY.git`
+  `git remote add origin https://github.com/USERNAME/REPOSITORY.git`
 - Change the remote's URL
-`git remote set-url`
+  `git remote set-url`
 if you are updating to an HTTPS:
-`git remote set-url https://github.com/USERNAME/REPOSITORY.git`
+  `git remote set-url https://github.com/USERNAME/REPOSITORY.git`
 if you are updating using SSH:
-`git remote set-url git@github.com:USERNAME/REPOSITORY.git`
+  `git remote set-url git@github.com:USERNAME/REPOSITORY.git`
 - List existing remotes
-`git remote -v`
+  `git remote -v`
 
 ## Access Token
 
@@ -30,5 +30,3 @@ if you are updating using SSH:
 - Name it, Scope it, Generate it, Secure it
 
 - Save into environment variable
-
-3b493a74284162d41f13c177dd310fda7321aa7f
