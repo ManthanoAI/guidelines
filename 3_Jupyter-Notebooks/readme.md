@@ -46,18 +46,19 @@
 - put your variables in there with your favorite editor
 
    `nano .env`
-   
+
    ```bash
    DATABASE_URL=postgres://username:password@localhost:5432/dbname
    AWS_ACCESS_KEY=myaccesskey
-``` 
+   ``` 
 
 
 - use a package such as `dotenv` to load the env file into notebook
-```python
+
+   ```python
 import os
 from dotenv import load_dotenv, find_dotenv
 dotenv_path = find_dotenv()
 load_dotenv(dotenv_path)
 database_url = os.environ.get("DATABASE_URL")
-```
+   ```
