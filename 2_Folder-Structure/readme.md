@@ -1,11 +1,6 @@
 # Folder Structure
 
-In every organization folders are everywhere. They should be understandable and logically structured.
-
-- Structure but
-
-Therefore we define a folder structure which should be as followed:
-
+- consistency: Use this structure everywhere possible
 - name: Uppercase, seperate-words-with-dashes
 - format: [index]_[folderName], e.g. `1_First-Folder-Name'`
 
