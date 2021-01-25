@@ -18,7 +18,7 @@ To create a repository (repo) please use following structure:
 
 ### Readme
 - name: readme.md
-- use: [markdown syntax]("https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet")
+- use: <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" rel="nofollow">markdown syntax</a>
 - language: english
 - content: instructions, set-up, access, urls
 - optional content: architecture, dependencies, access points (APIs), teams, resources
