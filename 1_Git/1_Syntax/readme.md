@@ -11,6 +11,8 @@
 
 ## Remote
 
+- Add a remote URL
+`got remote add origin https://github.com/USERNAME/REPOSITORY.git`
 - Change the remote's URL
 `git remote set-url`
 if you are updating to an HTTPS:
@@ -24,4 +26,9 @@ if you are updating using SSH:
 
 - Create an access token on platform (Github, GitLab, SourceForge)
   - GitHub: Your profile > Settings > Devloper setting > Personal access tokens
-    Name it, Scope it, Generate
+
+- Name it, Scope it, Generate it, Secure it
+
+- Save into environment variable
+
+3b493a74284162d41f13c177dd310fda7321aa7f
