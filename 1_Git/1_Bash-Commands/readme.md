@@ -63,14 +63,16 @@
   `git config --global user.password 'TOKEN'`
 
 ## Env-Variables
-- :warning: Never safe your credentials to a git, however if your system is hacked also env variables will be accessible
+- :warning: Never safe your credentials to a git
+
+- :warning: If your system is hacked also env variables will be accessible
 
 - Save your access token into a global variable
    - `cd`
    - `nano .bash_profile`
    - Add `export GHUSER='username'`
    - Add `export GHTOKEN='token'`
-- Save your access token into local .env file
+- Or save your access token into local .env file
    - create env file with exactelly the name: `.env`
    - Add `GHUSER='username'`
    - Add `GHTOKEN='password'`
