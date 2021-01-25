@@ -52,3 +52,4 @@ To create a repository (repo) please use following structure:
 ### Authors
 
 <a href="https://github.com/Man7hano">Manthano</a>
+Inspired by: <a href="https://github.com/immersive-garden/guidelines">Manthano</a> (Thanks: :blue_heart:)
