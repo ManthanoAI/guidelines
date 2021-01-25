@@ -65,7 +65,7 @@
    - Add `export GHUSER='username'`
    - Add `export GHTOKEN='token'`
 - Save your access token into local .env file
-   - create env file `credentials.env`
+   - create env file with exactelly the name: `.env`
    - Add `GHUSER='username'`
    - Add `GHTOKEN='password'`
    - Add `credentials.env` to `gitignore`
