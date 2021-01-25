@@ -56,6 +56,11 @@
 
   - Login into your account, use the generated token, the token should be saved
 
+  -Alternativelly you can set them manually:
+
+  `git config --global user.name "Username"`  
+  `git config --global user.password "Token"`
+
 ## Env-Variables
 - Never safe your credentials to a git, however if your system is hacked also env variables will be accessible
 
