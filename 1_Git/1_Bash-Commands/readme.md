@@ -3,6 +3,7 @@
 - [Clone or Pull](#Clone-or-Pull)
 - [Remote](#Remote)
 - [Access Token](#Access-Token)
+- [Env Variables](#Env-Variables)
 
 ## Clone-or-Pull
 
@@ -73,4 +74,4 @@
    - create env file with exactelly the name: `.env`
    - Add `GHUSER='username'`
    - Add `GHTOKEN='password'`
-   - :important: Add `.env` to `gitignore`
+   - :warning: Add `.env` to `gitignore`
