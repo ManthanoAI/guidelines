@@ -2,7 +2,15 @@
 
 :rocket: to the jupyter and beyond...
 
-## Basic rules
+- [Rules](#Rules)
+- [Basic-setup](#Basic-setup)
+- [Virtual-Enivronment](#Virtual-Enivronment)
+- [Securing-Env-Variables](#Securing-Env-Variables)
+- [](#)
+- [](#)
+
+
+## Rules
 
 1. Tell a story for an audience
 2. Document the process, not the results
@@ -15,7 +23,7 @@
 9. Design your notebooks to be read, run, and explored
 10. Advocate for open research
 
-## Basic setup
+## Basic-setup
 
 - Create an environment (Preferably conda, otherwise virualenv)
 - Install the needed packages
