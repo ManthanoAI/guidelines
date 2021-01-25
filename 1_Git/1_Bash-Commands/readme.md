@@ -62,7 +62,7 @@
   `git config --global user.password "Token"`
 
 ## Env-Variables
-- Never safe your credentials to a git, however if your system is hacked also env variables will be accessible
+- :warning: Never safe your credentials to a git, however if your system is hacked also env variables will be accessible
 
 - Save your access token into a global variable
    - `cd`
@@ -73,4 +73,4 @@
    - create env file with exactelly the name: `.env`
    - Add `GHUSER='username'`
    - Add `GHTOKEN='password'`
-   - Add `credentials.env` to `gitignore`
+   - :important: Add `.env` to `gitignore`
