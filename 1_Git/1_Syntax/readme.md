@@ -7,6 +7,7 @@
   `git clone`
 
 - Update the local copy
+
    `git pull`  
    or  
    `git fetch + git merge`
@@ -21,7 +22,7 @@
 
    `git remote set-url`
 
-  - if you are updating to an HTTPS:
+  - if you are updating using HTTPS:
 
     `git remote set-url https://github.com/USERNAME/REPOSITORY.git`
 
