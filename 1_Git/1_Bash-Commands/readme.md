@@ -7,7 +7,7 @@
 
 ## Clone-or-Pull
 
-- Create a local copy  
+- Create a local copy
 
   `git clone`
 
