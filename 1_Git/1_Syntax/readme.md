@@ -13,7 +13,7 @@
 
 ## Remote
 
-- Add a remote URL
+- Add a remote URL called origin
 
    `git remote add origin https://github.com/USERNAME/REPOSITORY.git`
 
@@ -21,13 +21,13 @@
 
    `git remote set-url`
 
-   if you are updating to an HTTPS:
+  - if you are updating to an HTTPS:
 
-     `git remote set-url https://github.com/USERNAME/REPOSITORY.git`
+    `git remote set-url https://github.com/USERNAME/REPOSITORY.git`
 
-   if you are updating using SSH:
+  - if you are updating using SSH:
 
-     `git remote set-url git@github.com:USERNAME/REPOSITORY.git`
+    `git remote set-url git@github.com:USERNAME/REPOSITORY.git`
 
 - List existing remotes
 
@@ -38,7 +38,7 @@
 - Create an access token on platform (Github, GitLab, SourceForge)
   - GitHub: Your profile > Settings > Devloper setting > Personal access tokens
 
-- Name it, Scope it, Generate it, Secure it
+- Name it, Scope it, Generate it, Secure it, Use it
 
 - Save the credentials
   - Enable credential memory
@@ -48,3 +48,5 @@
   - You may update the default cache timeout
 
      `git config --global credential.helper 'cache --timeout=3600'`
+
+  - Login into your account, use the generated token, the token should be saved
