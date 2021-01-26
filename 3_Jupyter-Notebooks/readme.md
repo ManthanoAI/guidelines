@@ -6,7 +6,7 @@
 - [Basic-setup](#Basic-setup)
 - [Virtual-Enivronment](#Virtual-Enivronment)
 - [Securing-Env-Variables](#Securing-Env-Variables)
-- [](#)
+- [Docker](#Docker)
 - [](#)
 
 
@@ -47,13 +47,9 @@
 
 ## Securing-Env-Variables
 
-- create an .env file
+- create an .env file, e.g. `touch .env`
 
-   `touch .env`
-
-- put your variables in there with your favorite editor
-
-   `nano .env`
+- put your variables in there with your favorite editor, e.g. `nano .env`
 
    ```bash
    DATABASE_URL=postgres://username:password@localhost:5432/dbname
@@ -69,4 +65,18 @@
    dotenv_path = find_dotenv()
    load_dotenv(dotenv_path)
    database_url = os.environ.get("DATABASE_URL")
+   ```
+
+## Docker
+
+- Principle: `Dockerfile` builds `Image` runs `Container`
+
+   ```dockerfile
+   FROM continuumio/anaconda3:latest
+
+   ADD install.sh /
+
+   RUN chmod u+x /install.sh
+
+   RUN /install.sh
    ```
