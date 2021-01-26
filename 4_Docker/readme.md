@@ -2,20 +2,22 @@
 
 "`Dockerfile` builds `Image` runs `Container`"
 
-[Dockerfiles](#Dockerfiles)
-[Container Run](#Container-Run)
+- [Dockerfiles](#Dockerfiles)
+- [MVP-Commands](#MVP-Commands)
 
 ## Dockerfiles
+
+- To build the image run `docker build -t USERNAME/IMAGENAME:TAGNAME .` (don't forget the . , username, imagename, tagname written small)
 
 - Dockerfiles are build in read-only layers
 - Ephemeral, stopped, destroyed and reproducible with minimum effort
 - Current working directory of docker build is called `build context`
-- To build the image run `docker build .` (don't forget the .)
 - Always combine `RUN apt-get update` with `apt-get install -y` in the same `RUN` statement (cache busting)
 - Use version pinning where needed, e.g. `s3cmd=1.1*`
 - Avoid `RUN apt-get upgrade` or `dist-upgrade`
 - Clean up the cache by removing `/var/lib/apt/lists`
 - There is only one `CMD` command active, the last one in the file
+- `ADD` and `COPY` are similar, but `COPY` is preferred
 
 ```dockerfile
 FROM ubuntu:18.04
@@ -23,7 +25,7 @@ RUN apt-get update && apt-get install -y \
 	curl \
 	s3cmd=2.1.* \
 	&& rm -rf /var/lib/apt/lists/*
-COPY . /app
+COPY requirements.txt /tmp/
 RUN make /app
 CMD python /app/app.py
 EXPOSE 80/tcp
@@ -40,4 +42,18 @@ LABEL producer="Manthano"
    - `EXPOSE` expose a specific port (use traditional ports of applications) [Expose-reference](https://docs.docker.com/engine/reference/builder/#expose)
    - `ENV` create environment variables [Env-reference](https://docs.docker.com/engine/reference/builder/#env)
 
-## Container-Run
+## MVP-Commands
+
+- run specific container:
+
+   `docker run [OPTIONS] IMAGE [COMMAND] [ARG...]`
+
+- run a stopped container:
+
+   `docker start`
+
+- see a list of all containers:
+
+   `docker ps -a`
+
+- [full documentation](https://docs.docker.com/engine/reference/commandline/run/)
