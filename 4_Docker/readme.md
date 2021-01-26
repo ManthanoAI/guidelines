@@ -1,4 +1,4 @@
-# Docker :whale: :whale: :whale:
+# Docker :whale:
 
 ## Dockerfiles
 
