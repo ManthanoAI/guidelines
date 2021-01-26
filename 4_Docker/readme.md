@@ -4,6 +4,8 @@
 
 - Dockerfiles are build in read-only layers
 - Ephemeral, stopped, destroyed and reproducible with minimum effort
+- Current working directory of docker build is called `build context`
+- To build the image run `docker build .` (don't forget the .)
 
 ```dockerfile
 FROM ubuntu:18.04
