@@ -1,4 +1,9 @@
-# Docker :whale:
+# Docker :whale: 
+
+"`Dockerfile` builds `Image` runs `Container`"
+
+[Dockerfiles](#Dockerfiles)
+[Container Run](#Container-Run)
 
 ## Dockerfiles
 
@@ -10,24 +15,29 @@
 - Use version pinning where needed, e.g. `s3cmd=1.1*`
 - Avoid `RUN apt-get upgrade` or `dist-upgrade`
 - Clean up the cache by removing `/var/lib/apt/lists`
+- There is only one `CMD` command active, the last one in the file
 
 ```dockerfile
 FROM ubuntu:18.04
 RUN apt-get update && apt-get install -y \
 	curl \
-	s3cmd=1.1* \
+	s3cmd=2.1.* \
 	&& rm -rf /var/lib/apt/lists/*
 COPY . /app
 RUN make /app
 CMD python /app/app.py
+EXPOSE 80/tcp
+ENV ADMIN_USER="Manny"
 LABEL producer="Manthano"
 ```
 
 - Most common layers:
-   - `FROM` creates a layer from the ubuntu:18.04 Docker image.
-   - `COPY` adds files from your Docker client’s current directory
-   - `RUN` builds your application with make
-   - `CMD` specifies what command to run within the container
-   - `LABEL` add one ore more labels
+   - `FROM` creates a layer from the ubuntu:18.04 Docker image | [From-reference](https://docs.docker.com/engine/reference/builder/#from)
+   - `COPY` adds files from your Docker client’s current directory [Copy-reference](https://docs.docker.com/engine/reference/builder/#copy)
+   - `RUN` builds your application with make [Run-reference](https://docs.docker.com/engine/reference/builder/#run)
+   - `CMD` specifies what command to run within the container [CMD-reference](https://docs.docker.com/engine/reference/builder/#cmd)
+   - `LABEL` add one ore more labels [Label-reference](https://docs.docker.com/engine/reference/builder/#label)
+   - `EXPOSE` expose a specific port (use traditional ports of applications) [Expose-reference](https://docs.docker.com/engine/reference/builder/#expose)
+   - `ENV` create environment variables [Env-reference](https://docs.docker.com/engine/reference/builder/#env)
 
-## RUN
+## Container-Run
