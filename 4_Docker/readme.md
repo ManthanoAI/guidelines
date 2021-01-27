@@ -24,14 +24,15 @@
   - clean up the cache by removing `/var/lib/apt/lists`
 
 ```dockerfile
-# Example of a<> dockerfile with the most common layers
+# Example of a dockerfile with the most common layers
 FROM ubuntu:18.04
 RUN apt-get update && apt-get install -y \
 	curl \
 	s3cmd=2.0.* \
 	&& rm -rf /var/lib/apt/lists/*
 COPY requirements.txt /tmp/
-CMD cat requirements.txt
+ENTRYPOINT ["echo", "Hello"]
+CMD ["Peter"]
 EXPOSE 80/tcp
 ENV ADMIN_USER="Manny"
 LABEL producer="Manthano"
@@ -41,10 +42,16 @@ LABEL producer="Manthano"
    - `FROM` creates a layer from an existing docker image | [From-reference](https://docs.docker.com/engine/reference/builder/#from)
    - `COPY` adds files from your Docker client’s current directory | [Copy-reference](https://docs.docker.com/engine/reference/builder/#copy)
    - `RUN` runs something in the shell | [Run-reference](https://docs.docker.com/engine/reference/builder/#run)
-   - `CMD` specifies what command to run within the container | [CMD-reference](https://docs.docker.com/engine/reference/builder/#cmd)
+     - `RUN ["executable", "param1", "param2"]`
+   - `CMD` provide defaults for an executing container, can be overwritten | [CMD-reference](https://docs.docker.com/engine/reference/builder/#cmd)
+     - `CMD ["executable", "param1", "param2"]` or
+     - `CMD ["param1", "param2"]` (if combined with ENTRYPOINT)
    - `LABEL` add one ore more labels | [Label-reference](https://docs.docker.com/engine/reference/builder/#label)
    - `EXPOSE` expose a specific port | (use traditional ports of applications) [Expose-reference](https://docs.docker.com/engine/reference/builder/#expose)
    - `ENV` create environment variables | [Env-reference](https://docs.docker.com/engine/reference/builder/#env)
+   - `ENTRYPOINT` configure a container that will run as an executable | [Entrypoint-reference](https://docs.docker.com/engine/reference/builder/#entrypoint)
+     - `ENTRYPOINT ["executable", "param1", param2"]`, entrypoint executables and params are fixed, only following `CMD` can be overwritten
+     - `CMD ["param1", param2"]`, those parameters are defaulty executed after the entrypoint but can be overwritten
 
 ## MVP-Commands
 
@@ -64,4 +71,4 @@ LABEL producer="Manthano"
 
 - delete a specific image:
   - remove by id: `docker rmi IMAGEID`
-  - remove by id or name: `docker rm IMAGEID` or `docker rm IMAGEID`
+  - remove by name:`docker rm USERNAME/IMAGENAME:TAGNAME`

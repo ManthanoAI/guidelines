@@ -85,6 +85,7 @@
   - For a miniconda env use: `FROM continuumio/miniconda3:latest`
   - For a anaconda3 env use: `FROM continuumio/anaconda3:latest`
   - instead of using `RUN pip install...` --> `RUN cat...` is used to not break the building process  <b>
+  
 
    ```dockerfile
    FROM continuumio/anaconda3:latest
