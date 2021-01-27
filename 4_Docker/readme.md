@@ -9,28 +9,29 @@
 
 - to build the image run (don't forget the . and username & imagename are written small):
 
-`docker build -t USERNAME/IMAGENAME:TAGNAME .`  
+   `docker build -t USERNAME/IMAGENAME:TAGNAME .`  
 
-- Dockerfiles are build in read-only layers
+- dockerfiles are build in read-only layers
 - ephemeral: stopped, destroyed and reproducible with minimum effort
 - current working directory of docker build is called `build context`
-- there is only one `CMD` command active, the last one in the file
+- only the last `CMD` in the dockerfile is executed
 - `ADD` and `COPY` are similar, but `COPY` is preferred
 
+- additional information to the often used `apt-get update`:
   - always combine `RUN apt-get update` with `apt-get install -y` in the same `RUN` statement (cache busting)
-  - use version pinning where needed, e.g. `3dchess=0.8.1-19`, check the your chosen versions if they [are available](https://packages.ubuntu.com/search?suite=default&section=all&arch=any&keywords=s3cmd&searchon=names)
+  - use version pinning where needed, e.g. `s3cmd=2.0.*`, check availability of [choosen version](https://packages.ubuntu.com/search?suite=default&section=all&arch=any&keywords=s3cmd&searchon=names)
   - avoid `RUN apt-get upgrade` or `dist-upgrade`
   - clean up the cache by removing `/var/lib/apt/lists`
 
 ```dockerfile
+# Example of a<> dockerfile with the most common layers
 FROM ubuntu:18.04
 RUN apt-get update && apt-get install -y \
 	curl \
 	s3cmd=2.0.* \
 	&& rm -rf /var/lib/apt/lists/*
 COPY requirements.txt /tmp/
-RUN make /app
-CMD python /app/app.py
+CMD cat requirements.txt
 EXPOSE 80/tcp
 ENV ADMIN_USER="Manny"
 LABEL producer="Manthano"
