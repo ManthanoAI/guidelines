@@ -73,16 +73,23 @@
 
 ### Create a Dockerfile from your existing conda environment
 
-- activate your active conda environment `conda activate YOURENVIRONMENT`
-- freeze your packages, create requirements file: `pip freeze > requirements.txt`
+- activate your active conda environment 
+
+   `conda activate YOURENVIRONMENT`
+
+- freeze your packages, create requirements file (use `pip list` instead of `pip freeze`)
+
+   `pip list --format=freeze > requirements.txt`
+
 - create the Dockerfile according to the script below
   - For a miniconda env use: `FROM continuumio/miniconda3:latest`
   - For a anaconda3 env use: `FROM continuumio/anaconda3:latest`
+  - instead of using `RUN pip install...` --> `RUN cat...` is used to not break the building process <b>
 
    ```dockerfile
    FROM continuumio/anaconda3:latest
 
    COPY requirements.txt /tmp/
 
-   RUN pip install --requirement /tmp/requirements.txt
+   RUN cat /tmp/requirements.txt | xargs -n 1 pip install
    ```

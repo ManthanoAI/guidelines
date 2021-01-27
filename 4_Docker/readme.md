@@ -7,7 +7,7 @@
 
 ## Dockerfiles
 
-- To build the image run (don't forget the . and username & imagename are written small)
+- To build the image run (don't forget the . and username & imagename are written small):
 
 `docker build -t USERNAME/IMAGENAME:TAGNAME .`  
 
