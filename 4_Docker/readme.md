@@ -18,7 +18,7 @@
 - `ADD` and `COPY` are similar, but `COPY` is preferred
 
   - always combine `RUN apt-get update` with `apt-get install -y` in the same `RUN` statement (cache busting)
-  - use version pinning where needed, e.g. `3dchess=0.8.1-19`, check the your chosen versions if they (are available)[https://packages.ubuntu.com/search?suite=default&section=all&arch=any&keywords=s3cmd&searchon=names]
+  - use version pinning where needed, e.g. `3dchess=0.8.1-19`, check the your chosen versions if they [are available](https://packages.ubuntu.com/search?suite=default&section=all&arch=any&keywords=s3cmd&searchon=names)
   - avoid `RUN apt-get upgrade` or `dist-upgrade`
   - clean up the cache by removing `/var/lib/apt/lists`
 
