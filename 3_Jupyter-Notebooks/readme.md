@@ -71,12 +71,18 @@
 
 - Principle: `Dockerfile` builds `Image` runs `Container`
 
+### Create a Dockerfile from your existing conda environment
+
+- activate your active conda environment `conda activate YOURENVIRONMENT`
+- freeze your packages, create requirements file: `pip freeze > requirements.txt`
+- create the Dockerfile according to the script below
+  - For a miniconda env use: FROM continuumio/miniconda3:latest
+  - For a anaconda3 env use: FROM continuumio/anaconda3:latest
+
    ```dockerfile
    FROM continuumio/anaconda3:latest
 
-   ADD install.sh /
+   COPY requirements.txt /tmp/
 
-   RUN chmod u+x /install.sh
-
-   RUN /install.sh
+   RUN pip install --requirement /tmp/requirements.txt
    ```

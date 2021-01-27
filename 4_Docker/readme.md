@@ -7,13 +7,15 @@
 
 ## Dockerfiles
 
-- To build the image run `docker build -t USERNAME/IMAGENAME:TAGNAME .` (don't forget the . , username, imagename, tagname written small)
+- To build the image run (don't forget the . and username & imagename are written small)
+
+`docker build -t USERNAME/IMAGENAME:TAGNAME .`  
 
 - Dockerfiles are build in read-only layers
-- Ephemeral, stopped, destroyed and reproducible with minimum effort
+- Ephemeral: stopped, destroyed and reproducible with minimum effort
 - Current working directory of docker build is called `build context`
 - Always combine `RUN apt-get update` with `apt-get install -y` in the same `RUN` statement (cache busting)
-- Use version pinning where needed, e.g. `s3cmd=1.1*`
+- Use version pinning where needed, e.g. `gparted=2.0.1`
 - Avoid `RUN apt-get upgrade` or `dist-upgrade`
 - Clean up the cache by removing `/var/lib/apt/lists`
 - There is only one `CMD` command active, the last one in the file
@@ -23,7 +25,7 @@
 FROM ubuntu:18.04
 RUN apt-get update && apt-get install -y \
 	curl \
-	s3cmd=2.1.* \
+	gparted=0.16.1-1 \
 	&& rm -rf /var/lib/apt/lists/*
 COPY requirements.txt /tmp/
 RUN make /app
@@ -34,13 +36,13 @@ LABEL producer="Manthano"
 ```
 
 - Most common layers:
-   - `FROM` creates a layer from the ubuntu:18.04 Docker image | [From-reference](https://docs.docker.com/engine/reference/builder/#from)
-   - `COPY` adds files from your Docker client’s current directory [Copy-reference](https://docs.docker.com/engine/reference/builder/#copy)
-   - `RUN` builds your application with make [Run-reference](https://docs.docker.com/engine/reference/builder/#run)
-   - `CMD` specifies what command to run within the container [CMD-reference](https://docs.docker.com/engine/reference/builder/#cmd)
-   - `LABEL` add one ore more labels [Label-reference](https://docs.docker.com/engine/reference/builder/#label)
-   - `EXPOSE` expose a specific port (use traditional ports of applications) [Expose-reference](https://docs.docker.com/engine/reference/builder/#expose)
-   - `ENV` create environment variables [Env-reference](https://docs.docker.com/engine/reference/builder/#env)
+   - `FROM` creates a layer from an existing docker image | [From-reference](https://docs.docker.com/engine/reference/builder/#from)
+   - `COPY` adds files from your Docker client’s current directory | [Copy-reference](https://docs.docker.com/engine/reference/builder/#copy)
+   - `RUN` runs something in the shell | [Run-reference](https://docs.docker.com/engine/reference/builder/#run)
+   - `CMD` specifies what command to run within the container | [CMD-reference](https://docs.docker.com/engine/reference/builder/#cmd)
+   - `LABEL` add one ore more labels | [Label-reference](https://docs.docker.com/engine/reference/builder/#label)
+   - `EXPOSE` expose a specific port | (use traditional ports of applications) [Expose-reference](https://docs.docker.com/engine/reference/builder/#expose)
+   - `ENV` create environment variables | [Env-reference](https://docs.docker.com/engine/reference/builder/#env)
 
 ## MVP-Commands
 
