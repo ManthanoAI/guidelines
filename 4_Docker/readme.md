@@ -8,7 +8,7 @@
 
 ## Dockerfiles
 
-- to build the image run (don't forget the . and username & imagename are written small):
+- to build the image run (don't forget the . and username & imagename are written small)
 
    `docker build -t USERNAME/IMAGENAME:TAGNAME .`  
 
@@ -18,7 +18,7 @@
 - only the last `CMD` in the dockerfile is executed
 - `ADD` and `COPY` are similar, but `COPY` is preferred
 
-- additional information to the often used `apt-get update`:
+- additional information to the often used `apt-get update`
   - always combine `RUN apt-get update` with `apt-get install -y` in the same `RUN` statement (cache busting)
   - use version pinning where needed, e.g. `s3cmd=2.0.*`, check availability of [choosen version](https://packages.ubuntu.com/search?suite=default&section=all&arch=any&keywords=s3cmd&searchon=names)
   - avoid `RUN apt-get upgrade` or `dist-upgrade`
@@ -37,7 +37,7 @@ CMD ["Peter"]
 EXPOSE 80/tcp
 ENV ADMIN_USER="Manny"
 LABEL producer="Manthano"
-USER user
+USER manny
 ```
 
 - most common layers:
@@ -69,22 +69,22 @@ USER user
 
    - `USER` set the user for the image
      - `USER USER[:GROUP]` or `UID[:GID]`
-     
+
    - [Other layers](https://docs.docker.com/engine/reference/builder) which are not discussed: `WORKDIR` `ARG` `ONBUILD` `STOPSIGNAL` `HEALTHCHECK` `SHELL`
 
 ## Docker-Commands
 
 ### Images
 
-- see a list of all images:
+- see a list of all images
 
    `docker images`
 
-- run specific image:
+- run specific image
 
    `docker run [OPTIONS] IMAGE [COMMAND] [ARG...]`
 
-- delete a specific image:
+- delete a specific image
 
   - remove by id: `docker rmi IMAGEID`
 
@@ -92,10 +92,18 @@ USER user
 
 ### Containers
 
-- run a stopped container:
+- run a stopped container
 
    `docker start`
 
-- see a list of all containers:
+- see a list of all containers
 
    `docker ps -a`
+
+- stop all containers
+
+   `docker container stop $(docker ps -a -q)`
+
+- remove all stopped containers
+
+   `docker rm $(docker ps -a -q)`

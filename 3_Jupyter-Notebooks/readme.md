@@ -98,4 +98,4 @@
 - navigate in the `build context` environment (where the dockerfile os located)
 - build the image by running:
 
-   `docker build -t USERNAME/notebook:ready .`
+   `docker build -t USERNAME/jupyter:TAGNAME .`
