@@ -31,8 +31,6 @@
 - create the requirements file
    `pip freeze > requirements.txt`
 
-
-
 ## Virtual-Environment
 
 - install <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html" rel="nofollow">anaconda</a> or miniconda

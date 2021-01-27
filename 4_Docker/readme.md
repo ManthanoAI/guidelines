@@ -3,7 +3,8 @@
 *`Dockerfile` builds `Image` runs `Container` - :artificial_satellite:*
 
 - [Dockerfiles](#Dockerfiles)
-- [MVP-Commands](#MVP-Commands)
+- [Images](#Images)
+- [Containers](#Containers)
 
 ## Dockerfiles
 
@@ -36,30 +37,60 @@ CMD ["Peter"]
 EXPOSE 80/tcp
 ENV ADMIN_USER="Manny"
 LABEL producer="Manthano"
+USER user
 ```
 
 - most common layers:
    - `FROM` creates a layer from an existing docker image | [From-reference](https://docs.docker.com/engine/reference/builder/#from)
+     - `FROM [--platform=PLATFORM] IMAGENAME` or `FROM [--platform=PLATFORM] IMAGENAME:IMAGETAG`
+
    - `COPY` adds files from your Docker client’s current directory | [Copy-reference](https://docs.docker.com/engine/reference/builder/#copy)
+     - `COPY [--chown=<user>:<group>] SOURCE DESTINATION`
+
    - `RUN` runs something in the shell | [Run-reference](https://docs.docker.com/engine/reference/builder/#run)
      - `RUN ["executable", "param1", "param2"]`
+
    - `CMD` provide defaults for an executing container, can be overwritten | [CMD-reference](https://docs.docker.com/engine/reference/builder/#cmd)
      - `CMD ["executable", "param1", "param2"]` or
      - `CMD ["param1", "param2"]` (if combined with ENTRYPOINT)
+
    - `LABEL` add one ore more labels | [Label-reference](https://docs.docker.com/engine/reference/builder/#label)
+     - `LABEL KEY=VALUE KEY=VALUE`
+
    - `EXPOSE` expose a specific port | (use traditional ports of applications) [Expose-reference](https://docs.docker.com/engine/reference/builder/#expose)
+     - `EXPOSE PORT`
+
    - `ENV` create environment variables | [Env-reference](https://docs.docker.com/engine/reference/builder/#env)
+     - `ENV KEY=VALUE`
+
    - `ENTRYPOINT` configure a container that will run as an executable | [Entrypoint-reference](https://docs.docker.com/engine/reference/builder/#entrypoint)
      - `ENTRYPOINT ["executable", "param1", param2"]`, entrypoint executables and params are fixed, only following `CMD` can be overwritten
-     - `CMD ["param1", param2"]`, those parameters are defaulty executed after the entrypoint but can be overwritten
+     - `CMD ["param1", param2"]`, those parameters are defaultly executed after the entrypoint, but can be overwritten
 
-## MVP-Commands
+   - `USER` set the user for the image
+     - `USER USER[:GROUP]` or `UID[:GID]`
+     
+   - [Other layers](https://docs.docker.com/engine/reference/builder) which are not discussed: `WORKDIR` `ARG` `ONBUILD` `STOPSIGNAL` `HEALTHCHECK` `SHELL`
 
-- [docker run documentation](https://docs.docker.com/engine/reference/commandline/run/)
+## Docker-Commands
 
-- run specific container:
+### Images
+
+- see a list of all images:
+
+   `docker images`
+
+- run specific image:
 
    `docker run [OPTIONS] IMAGE [COMMAND] [ARG...]`
+
+- delete a specific image:
+
+  - remove by id: `docker rmi IMAGEID`
+
+  - remove by name:`docker rm USERNAME/IMAGENAME:TAGNAME`
+
+### Containers
 
 - run a stopped container:
 
@@ -68,7 +99,3 @@ LABEL producer="Manthano"
 - see a list of all containers:
 
    `docker ps -a`
-
-- delete a specific image:
-  - remove by id: `docker rmi IMAGEID`
-  - remove by name:`docker rm USERNAME/IMAGENAME:TAGNAME`
