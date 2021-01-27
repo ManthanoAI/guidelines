@@ -4,7 +4,7 @@
 
 - [Rules](#Rules)
 - [Basic-setup](#Basic-setup)
-- [Virtual-Enivronment](#Virtual-Enivronment)
+- [Virtual-Environment](#Virtual-Environment)
 - [Securing-Env-Variables](#Securing-Env-Variables)
 - [Docker](#Docker)
 - [](#)
@@ -25,15 +25,15 @@
 
 ## Basic-setup
 
-- Create an environment (Preferably conda, otherwise virualenv)
-- Install the needed packages
+- create an environment (Preferably conda, otherwise virualenv)
+- install the needed packages
    `pip install`
-- Create the requirements file
+- create the requirements file
    `pip freeze > requirements.txt`
 
 
 
-## Virtual-Enivronment
+## Virtual-Environment
 
 - install <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html" rel="nofollow">anaconda</a> or miniconda
 
@@ -84,7 +84,7 @@
 - create the Dockerfile according to the script below
   - For a miniconda env use: `FROM continuumio/miniconda3:latest`
   - For a anaconda3 env use: `FROM continuumio/anaconda3:latest`
-  - instead of using `RUN pip install...` --> `RUN cat...` is used to not break the building process <b>
+  - instead of using `RUN pip install...` --> `RUN cat...` is used to not break the building process  <b>
 
    ```dockerfile
    FROM continuumio/anaconda3:latest
@@ -93,3 +93,10 @@
 
    RUN cat /tmp/requirements.txt | xargs -n 1 pip install
    ```
+
+### Run a build of the created Dockerfile
+
+- navigate in the `build context` environment (where the dockerfile os located)
+- build the image by running:
+
+   `docker build -t USERNAME/notebook:ready .`
