@@ -64,4 +64,4 @@ LABEL producer="Manthano"
 
 - delete a specific image:
   - remove by id: `docker rmi IMAGEID`
-  - remove by id or name: `docker rm IMAGEID`
+  - remove by id or name: `docker rm IMAGEID` or `docker rm IMAGEID`
