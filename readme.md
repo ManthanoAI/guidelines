@@ -16,6 +16,7 @@
 ## Must Reads
 
 - [The twelve-factor app](https://12factor.net/)
+- [Machine Learning - More data or better algorithms](https://www.kdnuggets.com/2015/06/machine-learning-more-data-better-algorithms.html)
 
 ## ToDo
 - [x] Git
