@@ -43,6 +43,16 @@
 
    `conda create -n myenv python=3.6`
 
+### Copying Environments to other machines
+
+- export your anaconda environment
+
+   `conda env export > environment.yml`
+
+- recreate it by using
+
+   `conda env -f environment.yml`
+
 ## Securing-Env-Variables
 
 - create an .env file, e.g. `touch .env`

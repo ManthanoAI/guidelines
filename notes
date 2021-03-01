@@ -1,0 +1,26 @@
+## Building software as a service: [12-Factor](https://12factor.net/)
+
+ - Use declarative formats for setup automation, to minimize joining time of developers :runner:
+ - Clean contract with underlying operating system, offering maximum portability :pencil:
+ - Suitable for deplyment on modern cloud platforms :cloud:
+ - Minimize divergence between development and production, enabling continuous deployment :arrow_down:
+ - Scaling up without significant changes to tooling, architecture, or development practises :chart_with_upwards_trend:
+
+ ## Twelve Factor App
+
+1. Codebase
+2. Dependencies (Dependency and Isolation)
+3. Config (Store config in the environment)
+4. Backing services
+5. Build --> Release --> Run 
+6. Process (Execute apps as one or more stateless processes)
+7. Port binding
+8. Concurrency (Scale out via the process model)
+9. Disposability
+10. Dev/Prod parity (Keep development, staging, and production as similar as possible) (Continuous deployment)
+Traditional app	                Twelve-factor app
+Time between deploys	Weeks	Hours
+Code authors vs code deployers	Different people	Same people
+Dev vs production environments	Divergent	As similar as possible
+11. Logs (Treat logs as event streams)
+12. Admin processes (Run admin/management tasks as one-off processes)
