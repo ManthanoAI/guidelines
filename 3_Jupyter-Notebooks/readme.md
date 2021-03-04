@@ -51,7 +51,7 @@
 
 - recreate it by using
 
-   `conda env -f environment.yml`
+   `conda env create -f environment.yml`
 
 ## Securing-Env-Variables
 
